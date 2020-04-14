@@ -19,6 +19,8 @@ public class player : MonoBehaviour
     private bool isGameOver;
     private bool isCrear;
 
+    [SerializeField] private GameObject fireBall;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,13 +66,18 @@ public class player : MonoBehaviour
 
     private void Fire()
     {
-        if (Input.GetKeyDown(KeyCode.X)){
+        if (Input.GetKeyDown(KeyCode.X))
+        {
             isFire = !isFire;
             fire.SetActive(isFire);
         }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            GameObject fb = Instantiate(fireBall);
+            fb.transform.position = this.transform.position+ new Vector3(0.75f,0.1f,0);
+        }
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
+        private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.transform.tag == "enemy")
         {

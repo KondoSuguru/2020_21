@@ -5828,6 +5828,12 @@ PrefabInstance:
       propertyPath: jumpPower
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 8507127040714722730, guid: 885f13967ee0c924e9a5258c40927090,
+        type: 3}
+      propertyPath: fireBall
+      value: 
+      objectReference: {fileID: 4703679090051576339, guid: 01b4ee6e5da56f24887925a211386100,
+        type: 3}
     - target: {fileID: 8507127040714722731, guid: 885f13967ee0c924e9a5258c40927090,
         type: 3}
       propertyPath: m_LocalPosition.x
